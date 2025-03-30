@@ -1,14 +1,17 @@
-# Usa uma imagem do Node.js
-FROM node:18-alpine
+# Usa a imagem oficial do Node.js
+FROM node:18
 
 # Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia os arquivos da aplicação para dentro do container
+# Copia os arquivos do projeto para dentro do container
 COPY . .
 
-# Expõe a porta 3000 (ou a porta que sua aplicação usa)
-EXPOSE 3000
+# Instala um servidor HTTP simples para rodar a aplicação
+RUN npm install -g http-server
 
-# Comando para iniciar a aplicação (se houver um servidor, ajuste o comando)
-CMD ["node", "gestaoFuncio.js"]
+# Expor a porta onde a aplicação rodará
+EXPOSE 8080
+
+# Comando para rodar o servidor HTTP
+CMD ["http-server", "-p", "8080"]
