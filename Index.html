@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv02</title>
+</head>
+<body>
+    <h2>Formulário de Cadastro de Funcioários</h2>
+
+    <p>Por favor, preencha o formulário abaixo para cadastrar um novo aluno.</p>
+
+    <hr>
+
+    <form action=""  method="post">
+        <p>Campos com * são obrigatórios.</p>
+        <hr>
+
+        <p>
+        <label for="nome">Nome: *</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome"><br><br>
+        <p>
+         
+        <p>
+        <label for="idade">Idade: *</label><br>
+        <input type="number" id="idade" name="idade"  placeholder="Digite a sua idade"><br><br>
+        <p>
+
+        <p>    
+        <label for="cargo">Cargo: *</label><br>
+        <input type="text" id="cargo" name="cargo" placeholder="Informe o cargo"><br><br>
+        <p>
+    
+        <p>
+        <label for="salario">Salário: *</label><br>
+        <input type="number" id="salario" name="salario" placeholder="Informe o valor do salário"><br><br>
+        <p>
+
+            <input type="submit" value="Cadastrar">  
+            <input type="reset" value="Limpar"><br><br>
+        
+    </form>
+
+        <!--<hr>
+
+        <p id="mensagem-aprovado"></p>  
+        <p id="mensagem-reprovado"></p>
+
+        </hr> -->
+     
+    <hr>
+
+            <h2>Alunos Cadastrados</h2>
+            <p>Lista de alunos cadastrados:</p>
+
+            <table border="9" cellpadding="5" cellspacing="0" width="100%">
+                <thead>
+                     <tr>
+                         <th bgcolor="white" width="130" >Nome</th>
+                         <th bgcolor="white" width="130">Idade</th>
+                         <th bgcolor="white" width="130">Cargo</th>
+                         <th bgcolor="white" width="130">Salario</th>
+
+                     </tr>
+                </thead>
+                <tbody id="table">
+                     <tr>
+                         <td bgcolor="white">Nome</td>
+                         <td bgcolor="white">Idade</td>
+                         <td bgcolor="white">Curso</td>
+                         <td bgcolor="white">Nota Final</td>
+                         <td>
+                                <button id="excluir" onclick="excluir(0)">Excluir</button>
+                         </td>
+                         <td>
+                                <button id="editar" onclick="editar(0)">Editar</button>
+                         </td>
+                     </tr>
+                    </body>
+            </table>
+    <hr>
+
+    <h3>Relatório</h3>
+    <div>
+        <button id="maior-que-cinco">Funcionários com Salário maior que 5000</button>
+        <button id="media-salario">Média Salarial</button>
+        <button id="media-idades">Cargos Únicos</button>
+        <button id="funcionario-ordem">Nome dos Funcionários em Maiúsculo</button>
+    </div>
+    <div id="relatorio-funcionario"></div>
+</body>
+ <script src="gestaoFuncio.js"></script>
+</html>
